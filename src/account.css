@@ -1,0 +1,153 @@
+/* 公共样式 */
+html,
+body,
+div,
+span,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+a,
+address,
+em,
+img,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+i,
+b,
+s {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-family: Helvetica, Arial;
+  word-break: break-all;
+}
+html,
+body {
+  height: 100%;
+  background-color: #edf1f2;
+  overflow: hidden;
+}
+.font-yahei {
+  font-family: '微软雅黑';
+}
+ul,
+ol {
+  list-style: none;
+}
+a img {
+  border: none;
+}
+a,
+a:link {
+  text-decoration: none;
+  color: #333;
+}
+
+/* 页面样式 */
+.tit {
+  height: 64px;
+  width: 100%;
+  display: flex;
+  margin: 6px auto;
+  align-items: center;
+  justify-content: space-around;
+}
+.tit1 {
+  width: 100px;
+  height: 50px;
+  display: block;
+  background-size: 100% 100%;
+  background: url(./img/logo.png) no-repeat;
+}
+.tit2 {
+  width: 60px;
+  height: 60px;
+  display: block;
+  background-size: 100% 100%;
+  background: url(./img/code.png) no-repeat;
+}
+.nav {
+  color: #505559;
+  width: 74%;
+  height: 206px;
+  display: flex;
+  margin: 62px auto 0;
+  align-items: center;
+  justify-content: space-between;
+}
+.opt {
+  width: 200px;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+.pic {
+  width: 200px;
+  height: 120px;
+  overflow: hidden;
+  display: block;
+  box-shadow: 0px 2px 6px 0px;
+  background-size: 100% 100%;
+}
+.pic img {
+  transition: all 0.6s;
+}
+.pic img:hover {
+  transform: scale(1.4);
+}
+.font {
+  width: 100%;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  color: #101010;
+  font-size: 20px;
+}
+/* 轮播图的样式 */
+#slideshow {
+  width: 100vw;
+  height: 46vh;
+  overflow: hidden;
+  position: relative;
+  margin: 0 auto;
+}
+
+#imglist li {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+
+  /* 全部图片设为透明 */
+  opacity: 0;
+  transition: opacity 3.5s;
+}
+#imglist > li img {
+  width: 100%;
+  height: 100%;
+}
+/* 具有appear类的元素设为 不透明 即显示 */
+#imglist > li.appear {
+  opacity: 1;
+}
