@@ -58,6 +58,7 @@ gulp.task('revHtml', function () {
   return gulp
     .src('./src/*.html')
     .pipe(htmlmin(options))
+    .pipe(rev())
     .pipe(gulp.dest('./build'))
 })
 
@@ -104,6 +105,7 @@ gulp.task('rev', function () {
 gulp.task('clean:Build', function () {
   return del(['./build/**/'])
 })
+//这边是最后的任务，将所有的函数都放到里面就行编译打包
 gulp.task(
   'default',
   gulp.series(
@@ -112,6 +114,7 @@ gulp.task(
     'revimg',
     'revjs',
     'rev',
+    'revHtml',
     function (done) {
       done()
     }
